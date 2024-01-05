@@ -1,0 +1,440 @@
+
+    *{  
+        margin: 0;
+        padding:0;
+        scroll-behavior: smooth;
+        overflow-x: hidden;
+
+        
+    }
+
+    body {
+        background-image: url(backgroundTot.jpg);
+        background-attachment: fixed;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+        cursor: url(customcursor2.png),auto;
+        
+    }
+    
+    .header-main {
+        font-family: roboto;
+        background-image: url(background2.jpg);
+        width: 100%;
+        height: 60px;
+        display: flex;
+        position: fixed;
+        z-index: 10;
+        top: 0;
+        list-style: none;
+        border-bottom: solid 2px rebeccapurple;
+    }
+
+    .menu-hov {
+        height: 100%;
+        width: 250px;
+        cursor: url(cursorcustom.png),pointer;
+        
+    }
+
+    .menu-hov h1 {
+        font-family: roboto; 
+        
+        margin-top: 11px;
+        margin-bottom: 14px;
+        padding: 2px;
+        border-right: solid 2px rebeccapurple;
+        text-align: center;
+        font-size: 27px;
+        color:aliceblue;     
+    }
+
+
+
+    nav {
+        width: 100%;
+        overflow-y: hidden;
+    }
+
+    .SM {
+        cursor: url(cursorcustom.png),pointer;
+        margin: 10px 0px 10px 15px;
+        border-left:  solid 2px rebeccapurple;
+        width: 250px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        padding-top: 8px;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }
+    
+    .SM li {
+        width: 100%;
+        row-gap: 10px;
+        cursor: url(cursorcustom.png),pointer;
+    }
+
+
+    .sidenav {
+        position: fixed;
+        left: 0;
+        top: 0;
+        margin-top: 60px;
+        width: 250px;
+        height: 100%;
+        background-color: black;
+        opacity: 90%; 
+    }
+
+    .sidenav_Ul { 
+        padding: 5%;
+        text-align: center;   
+        margin-bottom: 60px;
+        border-top: 0px solid rebeccapurple;
+          
+    }
+
+    .sidenav_Ul li{
+        display: flex;
+      justify-content: center;
+        margin:20% 10% 20% 10%;
+        
+        padding: 6%;
+        font-size: 23px;
+        font-family: 'Roboto', sans-serif;
+        color: aliceblue;
+        text-decoration: none;   
+        border-radius: 50px;
+        border: 2px solid rebeccapurple;
+    }
+
+   
+
+    .sidenav_Ul li a{
+        cursor: url(cursorcustom.png),pointer;
+        
+        text-decoration: none;   
+        
+    }
+
+    /*SOCIAL MEDIA HOVER EFFECT*/
+
+.SM li:hover a{
+    transition: ease-in-out 0.150s;
+    opacity: 50%;
+    
+}
+
+.SM li:not(:hover)a{
+    transition: ease-in-out 0.1s;
+    opacity: 100%;
+}
+
+/*STOP SOCIAL MEDIA HOVER EFFECT*/
+
+.menu-hov:hover h1{
+    transition: all ease-in-out 0.2s;
+    border-top-right-radius: 35px;
+    border-bottom-right-radius: 35px;
+    
+    color: rebeccapurple;
+    
+}
+
+.menu-hov:not(:hover) h1{
+    transition: all ease-in-out 0.150s;
+    border-right: solid 2px rebeccapurple;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;    
+}
+.main {
+    -webkit-filter: drop-shadow(2px 5px 5px black);
+        filter: drop-shadow(2px 5px 5px black);
+    margin-top: 70px;
+    margin:0 300px;
+}
+.sectionback {
+    
+    position: relative;
+    display: flex;
+    margin-top: 70px;
+    width: auto;
+    border-radius: 25px;
+    background-image: url(background2.jpg);
+    border-top: 2px solid rebeccapurple;
+    border-bottom: 2px solid rebeccapurple;
+    opacity: 90%;
+    height: 300px;
+    overflow: hidden;
+    
+}
+
+.sectionimg {
+    
+    padding: 30px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    
+    width: 230px;
+    -webkit-filter: drop-shadow(1px 1px 1px aliceblue);
+    filter: drop-shadow(1px 1px 3px rebeccapurple);
+   
+}
+
+
+.sectiongroup {
+    list-style: none;
+    width: 90%;
+    right: auto;
+}
+
+.sectiontitle{
+    font-weight: 400;
+    padding:15px 15px 15px 15px;
+    margin-right: 10px;
+    height:100px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+    border-bottom: 2px solid rebeccapurple;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    font-size: 40px;
+    -webkit-filter: drop-shadow(1px 1px 1px aliceblue);
+    filter: drop-shadow(1px 1px 1px rebeccapurple);
+}
+.sectiondescription{
+    font-weight: 100;
+    margin-top: 10px;
+    margin-right: 10px;
+    padding:15px 15px 15px 15px;
+    height:120px ;
+    border-top: 2px solid rebeccapurple;
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+    color: aliceblue;
+    font-size: 22px;
+    text-align: center;
+    -webkit-filter: drop-shadow(1px 1px 1px aliceblue);
+    filter: drop-shadow(1px 1px 1px rebeccapurple);
+    
+}
+
+.sectionread{
+    position: relative;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:55px;
+    margin-left: auto;
+    margin-right: 10px;
+    width: 300px;
+    right: 0;
+    background-color: rebeccapurple;
+    padding: 8px;
+    color: aliceblue;
+    font-weight:400;
+    font-size: 25px;
+    opacity: 0.9;
+    box-shadow:
+     -1px 0px 15px 0px #000000;
+    overflow-y: hidden;
+    cursor: url(cursorcustom.png),pointer;
+
+}
+
+.sectionread div{
+    -webkit-filter: drop-shadow(5px 5px 5px black);
+        filter: drop-shadow(5px 5px 5px black);
+    opacity: 80%;
+    display: flex;
+    justify-content: center;
+    overflow-y: hidden;
+    margin: 10px;
+}
+
+
+
+
+
+/* DROPDOWN STYLING START*/
+
+.wrapper {
+    visibility: hidden;
+    opacity: 0;
+    display: none;
+    position: absolute;
+}
+
+
+
+.menu-hov:hover>.wrapper{
+    transition: all ease-in-out 0.2s;
+    visibility: visible;
+    opacity: 1;
+    display: block;
+}
+
+.menu-hov:hover h1{
+    transition: all ease-in-out 0.2s;
+    border-top-right-radius: 35px;
+    border-bottom-right-radius: 35px;
+    opacity: 80%;
+    color: rebeccapurple;
+    
+}
+
+.menu-hov:not(:hover) h1{
+    transition: all ease-in-out 0.150s;
+    border-right: solid 2px rebeccapurple;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    
+    
+}
+
+
+/*DROPDOWN STYLING END*/
+
+
+
+/*HOVER READ HERE*/
+
+  .sectionread:hover {
+      
+      color: #fff;
+      opacity: 1;
+      transition: all 0.3s;
+  }
+  .sectionread:before {
+      position: absolute;
+      content: '';
+      display: inline-block;
+      left: 0;
+      width: 200px;
+      height: 100%;
+      background-color: #fff;
+      animation: shiny-sectionread 3s ease-in-out infinite;
+  }
+  
+  
+  @keyframes shiny-sectionread {
+    0% { -webkit-transform: scale(0) rotate(45deg); opacity: 0; }
+    80% { -webkit-transform: scale(0) rotate(45deg); opacity: 0.5; }
+    81% { -webkit-transform: scale(0) rotate(45deg); opacity: 0.9; }
+    100% { -webkit-transform: scale(10) rotate(45deg); opacity: 0; }
+}
+
+  
+ /*HOVER READ HERE END*/ 
+
+ /* sidenav li hover */
+
+ .sidenav_Ul li {
+    
+    content: "";
+    
+    height: 100%;
+    top: 0;
+    
+    z-index: -1;
+    box-shadow:
+     -7px -3px 15px 0px black,
+     -4px -4px 5px 0px black,
+     7px 3px 15px 0px rebeccapurple,
+     4px 4px 5px 0px rebeccapurple;
+    transition: all 0.3s ease;
+  }
+ 
+  .sidenav_Ul li:hover:after {
+    left: 0;
+    width: 100%;
+  }
+  .sidenav_Ul li:active {
+    top: 2px;
+  }
+
+  .sidenav_Ul li:hover {
+        
+        
+    border: 0;
+    border-radius: 60%;
+    border-radius: 25px;
+    transition: 0.1s ease-in-out;
+    margin-left: 15%;
+    margin-right: 15%;
+    text-align: center;
+    opacity: 90%;
+    font-size: 22px;
+    
+}
+
+
+.sidenav_Ul li:not(:hover) {
+    border: 2px solid rebeccapurple;
+    font-size: 23px;
+    border-radius: 60%;
+    border-radius: 25px;
+    transition: 0.1s ease-in-out;
+    text-align: center;
+    opacity: 100%;
+    
+}
+
+/* sidenav li NOT hover */
+
+
+
+@media (max-height: 945px){
+
+        .sidenav_Ul li:hover {
+        font-size: 19px;
+    }
+
+    .sidenav_Ul li:not(:hover){
+        font-size: 21px;
+    }
+}
+
+@media (max-width:1585px) {
+    
+     .main{
+        margin:0 0;
+        
+     }
+
+     .sectionback {
+        margin-left: auto;
+        margin-right: auto;
+        height: 300px;
+        width: 1000px;
+     }
+
+    .sectiontitle {
+        font-size: 35px;
+    }
+
+    .sectiongroup {
+        margin-left: auto;  
+    }
+
+    .sectionread{
+        display: flex;
+        
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        left: 60%;
+        
+        
+        
+        
+        
+      }
+}
+
