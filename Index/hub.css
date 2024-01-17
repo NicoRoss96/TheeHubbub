@@ -1065,6 +1065,10 @@ to {
     height: 20px;
   }
 
+  .footermain {
+    display: none;
+  }
+
 }
 
 @media (max-width:450px) {
