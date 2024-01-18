@@ -1,5 +1,99 @@
 
 
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+
+*, *::before, *::after{
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Lato', sans-serif;
+  background-color: #ded2ff;
+  color: #42225e;
+}
+
+.faq-container{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  
+  width: 950px;
+
+}
+
+
+.faq{
+  
+  background-color: rebeccapurple;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 30px;
+  margin: 20px 0;
+  position: relative;
+  overflow: hidden;
+  transition: all .4s ease;
+}
+
+.faq.active{
+  background-image: url(background2.jpg);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.faq-title{
+  margin: 0 35px 0 0;
+  color: aliceblue;
+}
+
+.faq-text{
+  color: white;
+  display: none;
+  margin: 30px 0 0;
+}
+
+.faq.active .faq-text{
+  display: block;
+}
+
+.faq-toggle {
+  background-color: transparent;
+  border: none;
+  cursor: url(cursorcustom.png),pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  height: 30px;
+  width: 30px;
+}
+
+.chevron, .close{
+  width: 12px;
+  height:12px;
+}
+
+.faq-toggle .close{
+  display: none;
+} 
+
+.faq.active .faq-toggle .close{
+  display: block;
+}
+
+.faq.active .faq-toggle .chevron{
+  display: none;
+}
+
+.faq.active .faq-toggle{
+  background-color: #A555EC;
+  border-radius: 50%;
+  color:white;
+}
+
     *{  
         margin: 0;
         padding:0;
@@ -82,12 +176,12 @@
         top: 0;
         margin-top: 60px;
         width: 250px;
-       
+        height: 100%;
         justify-content: center;
         align-items: center;
         background-color: black;
         overflow-y: hidden;
-        opacity: 90%; 
+        
         border-bottom-right-radius: 20px;
         border-right: 2px solid rebeccapurple; 
         
@@ -107,7 +201,7 @@
     .sidenav_Ul li{
       display: flex;
       justify-content: center;
-        margin:30px 10px 30px 10px;
+        margin:30px 30px 30px 30px;
         
         padding: 6%;
         font-size: 23px;
@@ -164,6 +258,7 @@
     
 
     #section2 {
+      overflow: hidden;
       position: relative;
       display: flex;
       justify-content: center;
@@ -176,7 +271,7 @@
 
     #section3 {
         height: 100vh;
-        
+        position: relative;
         overflow-y: hidden;
 
         -webkit-filter: drop-shadow(1px 5px 4px hsla(0, 0%, 0%, 0.666));
@@ -314,202 +409,6 @@
 
 /* sidenav li NOT hover */
 
-
-  
-/*faq*/
-
-  
-  #faq {
-    
-   background-color:rgba(240, 248, 255, 0.747);
-    max-width: 700px;
-    margin: auto;
-    margin-top: 20vh;
-    padding: 0 15px 15px 15px;
-    border-radius: 25px;
-    text-align: center;
-  }
-  
-  section.faq { 
-    
-    padding-top: 2em;
-    padding-bottom: 3em;
-    
-  }
-  
-  #faq ul {
-    text-align: left;
-    
-  }
-  .transition, p, ul li i:before, ul li i:after {
-    transition: all 0.3s;
-  }
-  
-  #faq .no-select, #faq h2 {
-    -webkit-tap-highlight-color: transparent;
-    -webkit-touch-callout: none;
-    user-select: none;
-  }
-  
-  #faq h1 {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    
-    color: #000;
-    padding: 5px;
-    margin: 15px 0;
-    
-    font-size: 30px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-weight: 500;
-    
-}
-
-
-  
-  #faq h2 {
-    color: rebeccapurple;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 22px;
-    line-height: 34px;
-    text-align: left;
-    padding: 15px 15px 0;
-    text-transform: none;
-    font-weight: 400;
-    letter-spacing: 1px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    height: 50px;
-    margin: 0;
-    cursor: url(cursorcustom.png),pointer;
-    transition: .3s;
-    
-  }
-  
-  #faq p {
-    color: aliceblue;
-    text-align: left;
-    font-family: 'hm_light', sans-serif;
-    font-size: 15px;
-    line-height: 1.45;
-    position: relative;
-    overflow: hidden;
-    max-height: 250px;
-    will-change: max-height;
-    contain: layout;
-    display: inline-block;
-    opacity: 1;
-    transform: translate(0, 0);
-    margin-top: 0px;
-    margin-bottom: 20px;
-    padding: 0 20px 0 20px;
-    transition: .3s opacity, .6s max-height;
-    hyphens: auto;
-    z-index: 2;
-  }
-  
-  #faq ul {
-    
-    list-style: none;
-    perspective: 900;
-    padding: 0;
-    margin: 0;
-  }
-  #faq ul li {
-    
-    position: relative;
-    overflow: hidden;
-    padding: 0;
-    margin: 0;
-    border-radius: 25px;
-    /*padding-bottom: 4px;*/
-    /*padding-top: 18px;*/
-    background-image: url(background2.jpg);
-    box-shadow: 0 3px 10px -2px rgba(0,0,0,0.1);
-    -webkit-tap-highlight-color: transparent;
-  }
-  #faq ul li + li {
-    margin-top: 15px;
-  }
-  #faq ul li:last-of-type {
-    padding-bottom: 0;
-  }
-  #faq ul li i {
-    position: absolute;
-    transform: translate(-6px, 0);
-    margin-top: 28px;
-    right: 15px;
-  }
-  #faq ul li i:before, ul li i:after {
-    content: "";
-    position: absolute;
-    
-    width: 3px;
-    height: 9px;
-  }
-  #faq ul li i:before {
-    transform: translate(-2px, 0) rotate(45deg);
-  }
-  #faq ul li i:after {
-    transform: translate(2px, 0) rotate(-45deg);
-  }
-
-  #faq ul li:hover{
-    color: rebeccapurple;
-  }
-
-
-  #faq ul li input[type=checkbox] {
-    position: absolute;
-    cursor: url(cursorcustom.png),pointer;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    opacity: 0;
-    touch-action: manipulation;
-    
-  }
-  
-  #faq ul li input[type=checkbox]:checked ~ h2 {
-    color: aliceblue;
-  }
-  #faq ul li input[type=checkbox]:checked ~ p {
-    /*margin-top: 0;*/
-    max-height: 0;
-    transition: .3s;
-    opacity: 0;
-    /*transform: translate(0, 50%);*/
-  }
-  
-  
-  #faq ul li a,
-  #faq ul li a:visited,
-  #faq ul li a:focus,
-  #faq ul li a:active,
-  #faq ul li a:link {
-    text-decoration: none;
-    outline: 0;
-  }
-  
-  #faq ul li a {
-    color: currentColor;
-    transition: .3s ease-in-out;
-  }
-  
-  #faq ul li h1, #faq ul li h2, #faq ul li h3, #faq ul li h4 {
-    margin: .3em 0;
-  }
-  
-  #faq ul{
-    
-    padding: 0;
-    list-style: none;
-  }
-  /* end of faq*/
-  
 /*footer*/
 .footermain{
  
@@ -786,6 +685,8 @@ to {
 
 @media(max-height: 945px){
 
+  
+
   .sidenav_Ul li{
     font-size: 21px; 
 }
@@ -795,13 +696,6 @@ to {
   font-size: 19px;
   
 }
-
-  .drawslide {
-    display: inline-block;
-    animation: 22s slide infinite linear;
-    padding-top: 12px;
-    width: 185vh;
-  }
 
   .premessa{
     font-size: 15px;
@@ -815,6 +709,8 @@ to {
 }
 
 @media (max-height: 780px) {
+
+
 
   .premessa{
     display: none;
@@ -892,6 +788,10 @@ to {
 
 @media (max-width: 1080px) {
 
+  .faq-container {
+    width: 800px;
+  }
+
   .menu-hov {
     height: 100%;
     width: 150px;
@@ -907,7 +807,8 @@ to {
   }
 
   .sidenav_Ul li {
-    font-size: 15px;
+    margin: 20px 15px 20px 15px;
+    font-size: 14px;
     padding: 17px;
     display: flex;
     justify-content: center;
@@ -915,9 +816,7 @@ to {
   }
 
   .sidenav_Ul li:hover {
-        
-        
-    border: 0;
+   
     border-radius: 60%;
     border-radius: 25px;
     transition: 0.1s ease-in-out;
@@ -925,7 +824,7 @@ to {
     margin-right: 15%;
     text-align: center;
     opacity: 90%;
-    font-size: 15px;
+    font-size: 13px;
     
 }
 
@@ -975,30 +874,18 @@ to {
     top: 50%;
     left: 50%;
     -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%)
-   
-    
+    transform: translate(-50%, -50%); 
    
   }
 
-  
-
-  #faq {
-    
-    background-color:rgba(240, 248, 255, 0.747);
-     max-width: 600px;
-     margin: auto;
-     margin-top: 20vh;
-     padding: 0 15px 15px 15px;
-     border-radius: 25px;
-     text-align: center;
-   }
 
 }
 
-@media (max-width:900px) {
+@media (max-width:1000px) {
 
-
+  .faq-container{
+    width: 750px;
+  }
 
   .premessa{
     width: 500px;
@@ -1009,6 +896,10 @@ to {
     font-size: 17px;
   }
 
+  .cards__item {
+    height: fit-content;
+  }
+
   .cards {
     
     margin: 0px 100px;
@@ -1017,7 +908,7 @@ to {
 
   .card {
     flex-direction: row;
-    height: 150px;
+    height: max-content;
     width: auto;
   }
 
@@ -1027,7 +918,7 @@ to {
   }
 
   .card__image {
-    width: 180px;
+    width: 250px;
   }
 
   .card__content {
@@ -1042,7 +933,7 @@ to {
 
   .card__text {
     font-size: 13px;
-    margin: 8px 0;
+    margin: max-content 0;
   }
 
   .sectionread{
@@ -1053,6 +944,7 @@ to {
     height:35px;
     width: 180px;
     padding: 10px;
+    margin:20px auto 0 auto;
     
   }
 
@@ -1071,13 +963,37 @@ to {
 
 }
 
+@media (max-width:800px) {
+
+  .faq-container {
+    width: 450px;
+  }
+
+  .cards {
+    justify-content: center;
+  }
+  .card__image {
+    position: absolute;
+    opacity: 0.2;
+    margin-top: 10px;
+    height: 160px;
+  }
+
+}
+
 @media (max-width:450px) {
+
+  .faq-container{
+    max-width:300px ;
+    
+  }
+
   .SM{
     display: none;
   }
 
   .logo:hover{
-    width:250px;
+    width:300px;
     transition: ease-in-out 0.3s;
     position: absolute;
     top: 50%;
@@ -1090,7 +1006,7 @@ to {
 }
 
   .logo:not(:hover) {
-    width: 240px;
+    width: 250px;
     transition: ease-in-out 0.2s;
     position: absolute;
     top: 50%;
