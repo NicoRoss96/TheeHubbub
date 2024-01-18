@@ -113,7 +113,7 @@ body{
     
     .header-main {
         
-        background-image: url(background2.jpg);
+        background:black;
         width: 100%;
         height: 60px;
         display: flex;
@@ -176,7 +176,7 @@ body{
         top: 0;
         margin-top: 60px;
         width: 250px;
-        height: 100%;
+        height: 100vh;
         justify-content: center;
         align-items: center;
         background-color: black;
@@ -189,35 +189,14 @@ body{
     }
 
     .sidenav_Ul { 
+      overflow: hidden;
         padding: 5%;
-        text-align: center;   
-        
-        border-left: 0px;
-        border-top: 0px;
-        border-bottom-right-radius: 20px ;
-        
+        text-align: center;  
+        position: relative; 
+        height: 100%;
     }
 
-    .sidenav_Ul li{
-      display: flex;
-      justify-content: center;
-        margin:30px 30px 30px 30px;
-        
-        padding: 6%;
-        font-size: 23px;
-        font-family: 'Roboto', sans-serif;
-        color: aliceblue;
-        text-decoration: none;   
-        border-radius: 50px;
-        border: 2px solid rebeccapurple;
-        
-    }
-
-    .sidenav_Ul li img {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    } 
+    
   
     #section1 {
 
@@ -357,13 +336,34 @@ body{
 
 /* sidenav li hover */
 
+.sidenav_Ul li img:not(:hover) {
+  width: 18px;
+  height: 18px;
+  margin: auto 2px;
+  
+}
+
+.sidenav_Ul li img:hover {
+  width: 13px;
+  height: 13px;
+  margin: auto 2px;
+}
+
   .sidenav_Ul li {
     
     content: "";
     
-    height: 100%;
-    top: 0;
+    height: 60px;
+        
+    padding: 6%;
+    font-size: 23px;
+    font-family: 'Roboto', sans-serif;
+    color: aliceblue;
+    text-decoration: none;   
     
+    border: 2px solid rebeccapurple;
+    
+    margin: 6vh 18px;
     z-index: -1;
     box-shadow:
      -7px -3px 15px 0px black,
@@ -391,7 +391,7 @@ body{
     margin-left: 15%;
     margin-right: 15%;
     text-align: center;
-    opacity: 90%;
+   
     font-size: 22px;
     
 }
@@ -403,7 +403,7 @@ body{
     border-radius: 25px;
     transition: 0.1s ease-in-out;
     text-align: center;
-    opacity: 100%;
+    
     
 }
 
@@ -708,30 +708,6 @@ to {
 
 }
 
-@media (max-height: 780px) {
-
-
-
-  .premessa{
-    display: none;
-  }
-  .cards {
-    position: absolute;
-    top: 70px;
-    height: 90%;
-  }
-  .cards__item {
-    height: auto;
-  }
-  .card__title {
-    font-size: 15px;
-  }
-  .card__text {
-    font-size: 13px;
-    margin: 4px 0;
-  }
-}
-
 @media(max-width: 1879px) {
   .drawslide {
     display: inline-block;
@@ -742,9 +718,9 @@ to {
 
 @media(max-width:1200px) {
   .cards {
-    position: absolute;
+    
     bottom: 0;
-    height: 90%;
+    height: 75%;
     width: 900px;
     display: flex;
     flex-wrap: wrap;
@@ -781,9 +757,7 @@ to {
     margin:5px;
   }
 
-  .premessa{
-    display: none;
-  }
+ 
 }
 
 @media (max-width: 1080px) {
@@ -807,8 +781,8 @@ to {
   }
 
   .sidenav_Ul li {
-    margin: 20px 15px 20px 15px;
-    font-size: 14px;
+    margin: 6vh 8px;
+    font-size: 15px;
     padding: 17px;
     display: flex;
     justify-content: center;
@@ -820,21 +794,27 @@ to {
     border-radius: 60%;
     border-radius: 25px;
     transition: 0.1s ease-in-out;
-    margin-left: 15%;
-    margin-right: 15%;
+    margin: 6vh 8px;
     text-align: center;
     opacity: 90%;
     font-size: 13px;
     
 }
 
-  .sidenav_Ul img {
-    width: 12px;
-    height: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.sidenav_Ul li img:not(:hover) {
+  width: 10px;
+  height: 10px;
+  margin: auto 2px;
+  
+}
+
+  .sidenav_Ul li:hover img {
+    width: 13px;
+    height: 13px;
+    margin: auto 2px;
   }
+
+  
 
   .SM {
     padding-top: 11px;
@@ -850,8 +830,8 @@ to {
   }
   .SM li img {
     
-    height: 15px;
-    width: 15px;
+    height: 16px;
+    width: 16px;
   }
 
   .logo:hover{
@@ -966,22 +946,48 @@ to {
 @media (max-width:800px) {
 
   .faq-container {
-    width: 450px;
+    width: 500px;
+  }
+
+  .premessa{
+    width: 400px;
+    padding: 10px;
+    height: fit-content;
+  }
+
+  .premessa h1{
+    padding: 0;
+    font-size: 13px;
   }
 
   .cards {
+    width: 420px;
     justify-content: center;
   }
+
+  .card__content {
+    width: auto;
+    padding: 10px;
+  }
+
+  .card__text {
+    margin: 5px 0;
+  }
+
   .card__image {
     position: absolute;
     opacity: 0.2;
-    margin-top: 10px;
-    height: 160px;
+    margin-top: 12px;
+    height: 150px;
+  }
+
+  .sectionread {
+    margin: 10px auto;
   }
 
 }
 
-@media (max-width:450px) {
+@media (max-width:500px) {
 
   .faq-container{
     max-width:300px ;
@@ -990,6 +996,52 @@ to {
 
   .SM{
     display: none;
+  }
+
+  .premessa{
+    width: 250px;
+    font-size: 10px;
+    padding: 10px;
+    height: fit-content;
+  }
+
+  .premessa h1{
+    padding: 0;
+    font-size: 13px;
+  }
+
+  .card {
+    height: 160px;
+  }
+
+  .cards {
+    width: 290px;
+    justify-content: center;
+  }
+
+  .card__content {
+    width: auto;
+    padding: 10px;
+  }
+
+  .card__title {
+    font-size: 12px;
+  }
+
+  .card__text {
+    font-size: 10px;
+  }
+
+  .card__image {
+    position: absolute;
+    opacity: 0.2;
+    width: auto;
+    height: 150px;
+    border-radius: 25px;
+  }
+
+  .sectionread {
+    margin-top: 15px;
   }
 
   .logo:hover{
