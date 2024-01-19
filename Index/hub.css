@@ -145,26 +145,26 @@ body{
 
     nav {
         
-        width: 100%;
+        margin: 0 auto 0 0;
         overflow-y: hidden;
     }
 
     .SM {
         cursor: url(cursorcustom.png),pointer;
-        margin: 10px 0px 10px 15px;
+        margin: 10px 0px 10px 0;
         border-left:  solid 2px rebeccapurple;
         width: 250px;
         display: flex;
-        justify-content: center;
-        text-align: center;
-        padding-top: 8px;
         border-top-left-radius: 20px;
         border-bottom-left-radius: 20px;
     }
     
     .SM li {
+      display: flex;
+      justify-content: center;
+      align-items: center;
         width: 100%;
-        row-gap: 10px;
+        
         
     }
 
@@ -189,13 +189,13 @@ body{
     }
 
     .sidenav_Ul { 
-      overflow: hidden;
-        padding: 5%;
-        text-align: center;  
-        position: relative; 
-        height: 100%;
+      padding: 5%;
+      text-align: center;  
+      position: relative; 
+      margin: auto 0;
     }
 
+    
     
   
     #section1 {
@@ -354,8 +354,10 @@ body{
     content: "";
     
     height: 60px;
-        
-    padding: 6%;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    
     font-size: 23px;
     font-family: 'Roboto', sans-serif;
     color: aliceblue;
@@ -817,11 +819,12 @@ to {
   
 
   .SM {
-    padding-top: 11px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
     width: 150px;
-    padding-left: 5px;
-    
+    margin:14px 0px 14px 0px; 
   }
+  
 
   .SM li a {
     display: flex;
@@ -994,9 +997,18 @@ to {
     
   }
 
-  .SM{
-    display: none;
+  .SM {
+    width: 120px;
+    justify-content: end;
+    border-radius: 0;
+    border: 0;
   }
+
+  .SM li{
+    width: 40px;
+  }
+
+  
 
   .premessa{
     width: 250px;
