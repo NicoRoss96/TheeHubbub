@@ -18,9 +18,7 @@ body{
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
-  
   width: 950px;
-
 }
 
 
@@ -352,12 +350,13 @@ body{
   .sidenav_Ul li {
     
     content: "";
-    
+    transition: 0.1s ease-in-out;
+    text-align: center;
     height: 60px;
     display: flex;
     justify-content: center;
     align-items: center;    
-    
+    border-radius: 25px;
     font-size: 23px;
     font-family: 'Roboto', sans-serif;
     color: aliceblue;
@@ -399,15 +398,6 @@ body{
 }
 
 
-.sidenav_Ul li:not(:hover) {
-    
-    border-radius: 60%;
-    border-radius: 25px;
-    transition: 0.1s ease-in-out;
-    text-align: center;
-    
-    
-}
 
 /* sidenav li NOT hover */
 
@@ -611,7 +601,7 @@ to {
   border-radius: 20px;
   display: flex;
   align-items: center;
-  margin:0 0 17px 27px;
+  margin: 0 auto 10px auto;
   justify-content: center;
   height:55px;
   width: 280px;
@@ -765,7 +755,9 @@ to {
 @media (max-width: 1080px) {
 
   .faq-container {
-    width: 800px;
+    
+    width: 80%;
+    
   }
 
   .menu-hov {
@@ -866,9 +858,7 @@ to {
 
 @media (max-width:1000px) {
 
-  .faq-container{
-    width: 750px;
-  }
+  
 
   .premessa{
     width: 500px;
@@ -949,7 +939,7 @@ to {
 @media (max-width:800px) {
 
   .faq-container {
-    width: 500px;
+    width: 90%;
   }
 
   .premessa{
@@ -964,8 +954,13 @@ to {
   }
 
   .cards {
-    width: 420px;
+    width: 0 auto;
+    margin: auto 25px;
     justify-content: center;
+  }
+
+  .card {
+    height: 170px;
   }
 
   .card__content {
@@ -974,18 +969,19 @@ to {
   }
 
   .card__text {
-    margin: 5px 0;
+    margin: 3px 0;
+    height: 80px;
+  }
+  .cards__item {
+    padding: 0;
   }
 
   .card__image {
-    position: absolute;
-    opacity: 0.2;
-    margin-top: 12px;
-    height: 150px;
+   display: none;
   }
 
   .sectionread {
-    margin: 10px auto;
+    margin-top: 10px;
   }
 
 }
@@ -993,7 +989,7 @@ to {
 @media (max-width:500px) {
 
   .faq-container{
-    max-width:300px ;
+    width: 95%;
     
   }
 
@@ -1023,11 +1019,11 @@ to {
   }
 
   .card {
-    height: 160px;
+    height: 170px;
   }
 
   .cards {
-    width: 290px;
+    margin: auto 10px;
     justify-content: center;
   }
 

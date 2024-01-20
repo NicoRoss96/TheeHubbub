@@ -19,7 +19,7 @@
     }
     
     .header-main {
-        font-family: roboto;
+        
         background:black;
         width: 100%;
         height: 60px;
@@ -34,11 +34,11 @@
     .menu-hov {
         height: 100%;
         width: 250px;
-        cursor: url(cursorcustom.png),pointer;
         
     }
 
     .menu-hov h1 {
+        cursor: url(cursorcustom.png),pointer;
         font-family: roboto; 
         
         margin-top: 11px;
@@ -50,30 +50,29 @@
         color:aliceblue;     
     }
 
-
-
     nav {
-        width: 100%;
+        
+        margin: 0 auto 0 0;
         overflow-y: hidden;
     }
 
     .SM {
         cursor: url(cursorcustom.png),pointer;
-        margin: 10px 0px 10px 15px;
+        margin: 10px 0px 10px 0;
         border-left:  solid 2px rebeccapurple;
         width: 250px;
         display: flex;
-        justify-content: center;
-        text-align: center;
-        padding-top: 8px;
         border-top-left-radius: 20px;
         border-bottom-left-radius: 20px;
     }
     
     .SM li {
+      display: flex;
+      justify-content: center;
+      align-items: center;
         width: 100%;
-        row-gap: 10px;
-        cursor: url(cursorcustom.png),pointer;
+        
+        
     }
 
 
@@ -88,13 +87,13 @@
         opacity: 90%; 
     }
 
+    
     .sidenav_Ul { 
         padding: 5%;
-        text-align: center;   
-        margin-bottom: 60px;
-        border-top: 0px solid rebeccapurple;
-          
-    }
+        text-align: center;  
+        position: relative; 
+        margin: auto 0;
+      }
 
     .sidenav_Ul li{
         display: flex;
@@ -118,6 +117,88 @@
         text-decoration: none;   
         
     }
+
+
+    .sectionimg:hover {
+        cursor: url(cursorcustom.png),pointer;
+      
+      opacity: 60%;
+    }
+    
+    /* The Modal (background) */
+    .modal {
+      display: none; /* Hidden by default */
+      position: fixed; /* Stay in place */
+      z-index: 1; /* Sit on top */
+      padding-top: 60px; /* Location of the box */
+      left: 0;
+      top: 0;
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      overflow: hidden; /* Enable scroll if needed */
+      background-color: rgb(0,0,0); /* Fallback color */
+      background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    }
+    
+    /* Modal Content (image) */
+    .modal-content {
+        cursor: url(cursorcustom.png),pointer;
+    width: fit-content;
+    height: fit-content;
+      display: block;
+      
+      
+    }
+    
+    
+    /* Add Animation */
+    .modal-content{  
+      -webkit-animation-name: zoom;
+      -webkit-animation-duration: 0.6s;
+      animation-name: zoom;
+      animation-duration: 0.6s;
+    }
+    
+    @-webkit-keyframes zoom {
+      from {-webkit-transform:scale(0)} 
+      to {-webkit-transform:scale(1)}
+    }
+    
+    @keyframes zoom {
+      from {transform:scale(0)} 
+      to {transform:scale(1)}
+    }
+    
+    
+
+    /* The Close Button */
+    .close {
+      padding: 10px;
+      top: 60px;
+      display: flex;
+      justify-content: center;
+      color: #f1f1f1;
+      font-size: 40px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    
+    .close:hover,
+    .close:focus {
+      color: #bbb;
+      text-decoration: none;
+      
+    }
+    
+    
+            .sidenav{
+                box-shadow: 1px 1px 10px black;
+            }
+    
+            .header-main {
+                box-shadow: 1px 1px 10px black; 
+            }
+
 
     /*SOCIAL MEDIA HOVER EFFECT*/
 
@@ -153,8 +234,8 @@
     -webkit-filter: drop-shadow(2px 5px 5px black);
         filter: drop-shadow(2px 5px 5px black);
     margin-top: 70px;
-    margin-left: 300px;
-    margin-right: 300px;
+    margin-left: 275px;
+    margin-right: 275px;
 }
 .sectionback {
     
@@ -174,38 +255,41 @@
 
 .sectionimg {
     
-    padding: 30px; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: absolute;
     overflow: hidden;
-    border-bottom-left-radius:25px ;
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
-    width: 230px;
+    width: 170px;
+    
+     margin: 5px 5px;
+    padding:10px;
     -webkit-filter: drop-shadow(1px 1px 1px aliceblue);
     filter: drop-shadow(1px 1px 3px rebeccapurple);
 }
 
-.sectionimg img {
-    border-radius: 5px;
+.sectionimg {
+  padding:0;
+  width: 180px;
+  margin: 25px 0 0 20px;
 }
 
+.sectionimg img {
+  border-radius: 25px;
+}
 
 .sectiongroup {
-    list-style: none;
-    width: 90%;
+    margin: auto 0 auto 215px;
+    width: 100%;
     right: auto;
 }
 
 .sectiontitle{
+  display: flex;
+  justify-content: center;
+  align-items: center;
     font-weight: 400;
     padding:15px 15px 15px 15px;
     margin-right: 10px;
     height:100px ;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    list-style: none;
     color: aliceblue;
     border-bottom: 2px solid rebeccapurple;
     border-bottom-left-radius: 25px;
@@ -228,6 +312,7 @@
     text-align: center;
     -webkit-filter: drop-shadow(1px 1px 1px aliceblue);
     filter: drop-shadow(1px 1px 1px rebeccapurple);
+    list-style: none;
     
 }
 
@@ -239,7 +324,7 @@
     justify-content: center;
     height:55px;
     margin-left: auto;
-    margin-right: 10px;
+    margin-right: 5px;
     width: 300px;
     right: 0;
     background-color: rebeccapurple;
@@ -395,16 +480,236 @@
 
 /* sidenav li NOT hover */
 
+@media (max-width:1600px) {
 
+  .main {
+    margin: 70px 125px;
+  }
 
-@media(max-height: 945px){
+  .sectiontitle {
+    font-size: 25px;
+  }
 
-        .sidenav_Ul li:hover {
-        font-size: 19px;
-    }
-
-    .sidenav_Ul li:not(:hover){
-        font-size: 21px;
-    }
+  .sectiondescription{
+    font-size: 18px;
+  }
 }
 
+@media (max-width: 1080px) {
+
+    
+    .sectionimg {
+      padding:0;
+      width: 180px;
+      margin: 25px 0 0 20px;
+    }
+
+    
+
+    .sectiontitle {
+      padding: 10px;
+    }
+
+    .sectiondescription {
+      border: 0;
+      margin-top: 0;
+      font-size: 17px;
+      padding: 7px;
+    }
+
+    .sectionback {
+      border-radius: 30px;
+    }
+
+    .main {
+      margin: 70px 75px;
+    }
+  
+    .menu-hov {
+      height: 100%;
+      width: 150px;
+  }
+  
+    .menu-hov h1 {
+      font-size: 22px;
+      margin-top: 14px;
+    }
+  
+    .sidenav {
+      width: 150px;
+    }
+  
+    .sidenav_Ul li {
+      margin: 6vh 8px;
+      font-size: 15px;
+      padding: 17px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .sidenav_Ul li:hover {
+     
+      border-radius: 60%;
+      border-radius: 25px;
+      transition: 0.1s ease-in-out;
+      margin: 6vh 8px;
+      text-align: center;
+      opacity: 90%;
+      font-size: 13px;
+      
+  }
+
+  .sidenav_Ul li:not(:hover) {
+    font-size: 17px;
+  }
+  
+  
+    
+  
+    .SM {
+      border-top-right-radius: 20px;
+      border-bottom-right-radius: 20px;
+      width: 150px;
+      margin:14px 0px 14px 0px; 
+    }
+    
+  
+    .SM li a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .SM li img {
+      
+      height: 16px;
+      width: 16px;
+    }
+
+    .sectionread {
+      margin: 0 auto;
+    }
+
+  
+
+}
+
+@media (max-width:700px) {
+
+  .main {
+    margin: 70px 20px;
+  }
+
+  .sectionback {
+    height: 250px;
+
+  }
+
+  .sectionimg {
+    margin-top: 20px;
+    width: 145px;
+  }
+
+  .sectiongroup {
+    margin-left: 180px;
+  }
+
+  .sectiontitle{
+    font-size: 20px;
+  }
+
+  .sectiondescription {
+    display: none;
+  }
+
+
+.sectionread {
+  width: 230px;
+  margin: 50px auto 0 auto;
+}
+
+
+
+}
+
+@media (max-width:500px) {
+
+  .main {
+    margin: 70px 10px;
+  }
+
+  .sectionback {
+    height: 200px;
+  }
+
+  .sectionimg {
+    width: 120px;
+    margin: 15px 0 0 15px;
+  }
+
+  .sectiongroup {
+    margin-left:155px ;
+  }
+
+  .sectiontitle {
+    font-size: 17px;
+    
+  }
+
+  
+  .sectionread {
+    margin-top: 15px;
+    font-size: 17px;
+    width: 145px;
+    padding: 4px;
+  }
+
+  .sectionread div{
+    margin: 5px;
+  }
+
+  .sectionread img {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+@media (max-width:350px) {
+
+  .sectiongroup {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  .sectionimg {
+    width: 70px;
+  }
+  .sectionimg img {
+    border-radius: 10px;
+  }
+  .sectiontitle {
+    border: 0;
+    margin-left: 80px;
+    margin-right: 0;
+  }
+  .sectionread {
+    width: 100%;
+    margin: 15px auto 0 auto;
+  }
+ 
+}
+
+@media(max-width:300px) {
+.SM {
+  display: none;
+
+}
+
+.sectionimg {
+  display: none;
+}
+.sectiontitle {
+  margin: 0;
+}
+
+}
