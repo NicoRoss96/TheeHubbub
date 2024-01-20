@@ -222,13 +222,14 @@ body{
     }
 
     .drawslide img{
+        margin-top:auto 10px;
         object-fit: cover;
         width: fit-content;
     }
 
     .drawslide {
         display: inline-block;
-        
+        width: 190vh;
         animation: 22s slide infinite linear;
     }
 
@@ -240,7 +241,7 @@ body{
       display: flex;
       justify-content: center;
         height: 100vh;
-        padding-top:65px;
+        padding-top:75px;
         -webkit-filter: drop-shadow(1px 5px 4px hsla(0, 0%, 0%, 0.666));
         filter: drop-shadow(1px 5px 4px hsla(0, 0%, 0%, 0.666));
         
@@ -464,10 +465,11 @@ to {
   color: #000000a5;
   background-color:rgba(240, 248, 255, 0.747);
   width: 800px;
-  height: 15%;
+  height: 130px;
   padding: 10px;
   border-radius: 15px;
-  margin-top: 20px;
+  margin: fit-content auto auto auto;
+  
   overflow: hidden;
   
 }
@@ -500,8 +502,9 @@ to {
 .cards {
   overflow: hidden;
   position: absolute;
-  bottom: 0;
+  top: 250px;
   height: 75%;
+  max-height: 1000px;
   width: 1200px;
   display: flex;
   flex-wrap: wrap;
@@ -673,7 +676,34 @@ to {
 
 /*HOVER charities END*/ 
 
+@media (max-height:500px) {
+  #secton1{
+    position: absolute;
+  }
+}
 
+@media (max-height:800px) {
+
+  .sidenav_Ul li {
+    margin: 4vh 28px;
+  }
+
+  #section2 {
+    height: 900px;
+  }
+
+  #section3{
+    height: 900px;
+  }
+
+  .premessa {
+    display: none;
+  }
+  .cards {
+    
+    top: 70px;
+  }
+}
 
 @media(max-height: 945px){
 
@@ -700,13 +730,6 @@ to {
 
 }
 
-@media(max-width: 1879px) {
-  .drawslide {
-    display: inline-block;
-    animation:22s slide infinite linear;
-    width: 190vh;
-  } 
-}
 
 @media(max-width:1200px) {
   .cards {
@@ -754,6 +777,8 @@ to {
 
 @media (max-width: 1080px) {
 
+  
+
   .faq-container {
     
     width: 80%;
@@ -775,7 +800,7 @@ to {
   }
 
   .sidenav_Ul li {
-    margin: 6vh 8px;
+    margin: 4vh 8px;
     font-size: 15px;
     padding: 17px;
     display: flex;
@@ -788,7 +813,7 @@ to {
     border-radius: 60%;
     border-radius: 25px;
     transition: 0.1s ease-in-out;
-    margin: 6vh 8px;
+    margin: 4vh 10px;
     text-align: center;
     opacity: 90%;
     font-size: 13px;
@@ -863,6 +888,7 @@ to {
   .premessa{
     width: 500px;
     font-size: 13px;
+    height: 120px;
   }
 
   .premessa h1{
@@ -954,6 +980,7 @@ to {
   }
 
   .cards {
+    
     width: 0 auto;
     margin: auto 25px;
     justify-content: center;
@@ -1079,4 +1106,13 @@ to {
   }
 
 } 
+
+@media(max-width:300px) {
+  .SM {
+    display: none;
+  
+  }
+  
+  
+  }
 

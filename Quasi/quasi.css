@@ -143,8 +143,9 @@
     /* Modal Content (image) */
     .modal-content {
         cursor: url(cursorcustom.png),pointer;
-    width: fit-content;
-    height: fit-content;
+        margin:auto;
+        width: 500px;
+        
       display: block;
       
       
@@ -268,7 +269,7 @@
 .sectionimg {
   padding:0;
   width: 180px;
-  margin: 25px 0 0 20px;
+  margin: 22px 0 0 20px;
 }
 
 .sectionimg img {
@@ -501,7 +502,7 @@
     .sectionimg {
       padding:0;
       width: 180px;
-      margin: 25px 0 0 20px;
+      
     }
 
     
@@ -561,7 +562,7 @@
   }
 
   .sidenav_Ul li:not(:hover) {
-    font-size: 17px;
+    font-size: 15px;
   }
   
   
@@ -634,6 +635,18 @@
 
 @media (max-width:500px) {
 
+  .SM {
+    width: 120px;
+    justify-content: end;
+    border-radius: 0;
+    border: 0;
+  }
+
+  .SM li{
+    width: 40px;
+  }
+
+
   .main {
     margin: 70px 10px;
   }
@@ -653,6 +666,7 @@
 
   .sectiontitle {
     font-size: 17px;
+    padding: 10px 17px;
     
   }
 
