@@ -429,7 +429,7 @@
  /* sidenav li hover */
 
  .sidenav_Ul li {
-    
+  cursor: url(cursorcustom.png),pointer;
     content: "";
     
     height: 100%;
