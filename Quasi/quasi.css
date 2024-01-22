@@ -98,8 +98,8 @@
     .sidenav_Ul li{
         display: flex;
       justify-content: center;
-        margin:20% 10% 20% 10%;
         
+        margin: 6vh 18px;
         padding: 6%;
         font-size: 23px;
         font-family: 'Roboto', sans-serif;

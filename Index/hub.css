@@ -197,7 +197,7 @@ body{
     
   
     #section1 {
-
+      
        overflow: hidden; 
        white-space: nowrap;
        
@@ -208,6 +208,10 @@ body{
         filter: drop-shadow(5px 5px 5px black);
         position: absolute;
         z-index: 9;
+        top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%)
     }
 
 
@@ -221,15 +225,20 @@ body{
         
     }
 
+    
+    .draw {
+      margin-top: 30px;
+    }
     .drawslide img{
         margin-top:auto 10px;
         object-fit: cover;
         width: fit-content;
+        height: 100vh;
     }
 
     .drawslide {
         display: inline-block;
-        width: 190vh;
+        width: max-content;
         animation: 22s slide infinite linear;
     }
 
@@ -316,20 +325,14 @@ body{
     width: 37%;
     transition: ease-in-out 0.3s;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%)
+    
 }
 
 .logo:not(:hover){
     width: 35%;
     transition: ease-in-out 0.2s;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%)
+    
 }
 
 
@@ -858,10 +861,6 @@ to {
     width: 390px;
     transition: ease-in-out 0.3s;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%)
     
 
    
@@ -871,10 +870,7 @@ to {
     width: 370px;
     transition: ease-in-out 0.2s;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%); 
+   
    
   }
 
@@ -1046,7 +1042,7 @@ to {
   }
 
   .card {
-    height: 170px;
+    height: 210px;
   }
 
   .cards {
@@ -1059,12 +1055,15 @@ to {
     padding: 10px;
   }
 
-  .card__title {
-    font-size: 12px;
-  }
 
   .card__text {
-    font-size: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    padding: 5px;
+    margin: 0;
+    height: 130px;
   }
 
   .card__image {
@@ -1076,17 +1075,15 @@ to {
   }
 
   .sectionread {
-    margin-top: 15px;
+    
+    padding: 5px;
   }
 
   .logo:hover{
     width:300px;
     transition: ease-in-out 0.3s;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%)
+    
     
 
    
@@ -1096,10 +1093,7 @@ to {
     width: 250px;
     transition: ease-in-out 0.2s;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%)
+    
    
     
    
