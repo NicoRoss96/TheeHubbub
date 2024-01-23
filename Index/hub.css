@@ -239,6 +239,7 @@ body{
     .drawslide {
         display: inline-block;
         width: max-content;
+        height: fit-content;
         animation: 22s slide infinite linear;
     }
 
