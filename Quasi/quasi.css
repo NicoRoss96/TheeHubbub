@@ -296,8 +296,7 @@
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
     font-size: 40px;
-    -webkit-filter: drop-shadow(1px 1px 1px aliceblue);
-    filter: drop-shadow(1px 1px 1px rebeccapurple);
+    
 }
 .sectiondescription{
     font-weight: 100;
