@@ -5,8 +5,6 @@
         padding:0;
         scroll-behavior: smooth;
         overflow-x: hidden;
-
-        
     }
 
     body {
@@ -70,9 +68,8 @@
       display: flex;
       justify-content: center;
       align-items: center;
-        width: 100%;
-        
-        
+      width: 100%;
+         
     }
 
 
@@ -109,7 +106,6 @@
         border: 2px solid rebeccapurple;
     }
 
-   
 
     .sidenav_Ul li a{
         cursor: url(cursorcustom.png),pointer;
@@ -296,7 +292,7 @@
     border-bottom: 2px solid rebeccapurple;
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
-    font-size: 40px;
+    font-size: 35px;
     
 }
 .sectiondescription{
@@ -352,9 +348,6 @@
 }
 
 
-
-
-
 /* DROPDOWN STYLING START*/
 
 .wrapper {
@@ -363,9 +356,6 @@
     display: none;
     position: absolute;
 }
-
-
-
 .menu-hov:hover>.wrapper{
     transition: all ease-in-out 0.2s;
     visibility: visible;
@@ -387,19 +377,13 @@
     border-right: solid 2px rebeccapurple;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
-    
-    
 }
 
-
 /*DROPDOWN STYLING END*/
-
-
 
 /*HOVER READ HERE*/
 
   .sectionread:hover {
-      
       color: #fff;
       opacity: 1;
       transition: all 0.3s;
